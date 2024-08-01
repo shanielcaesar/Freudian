@@ -15,6 +15,7 @@
 body {
   background-color: var(--background-color);
   margin: 0;
+  padding: 0;
   font-family: "Poppins", sans-serif;
 }
 
@@ -45,23 +46,20 @@ nav ul li a {
 }
 
 nav ul li a.active {
-  color: var(--blue);
+  color: var(--light-text-color);
 }
 
 nav ul li a:hover {
-  color: var(--blue);
+  color: var(--text-color);
 }
 
 .logo {
   display: flex;
   align-items: center;
+  justify-content: center;
   font-weight: 200;
   font-family: "Lobster", cursive;
-  color: var(--blue);
-}
-
-.logo span {
-  color: var(--green);
+  color: var(--light-text-color);
 }
 
 .logo img {
@@ -73,6 +71,52 @@ h1 {
   text-align: center;
   margin-top: 50px;
   color: var(--text-color);
+}
+
+.bg {
+  position: relative;
+  height: 700px; /* Fixed height */
+  background-image: url("/images/dcbg.jpg"); /* Path to your image */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; /* Ensure the image covers the area */
+}
+
+.bg-content {
+  position: relative;
+  z-index: 2; /* Ensure content is above the overlay */
+  color: white; /* Adjust text color for readability */
+  padding: 20px;
+  text-align: center;
+}
+
+.bg-content h1 {
+  margin-top: 150px;
+  font-size: 150px;
+  color: var(--white);
+}
+
+.bg-content p {
+  font-size: 20px;
+  margin-top: -120px;
+}
+
+.bg::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.452); /* Adjust opacity for more darkness */
+  z-index: 1; /* Ensure the overlay is on top of the image */
+}
+
+.bg img {
+  width: 100%; /* Ensures the image takes up the full width */
+  height: auto; /* Maintains the aspect ratio */
+  max-height: 700px; /* Sets the maximum height */
+  object-fit: cover; /* Ensures the image covers the area without stretching */
 }
 
 table {
@@ -98,7 +142,10 @@ tr:hover {
 
 .home {
   text-align: center;
-  height: 100vh;
+  height: auto;
+  width: 100%;
+  padding: 0;
+  background-color: red;
 }
 
 .hero h1 {
@@ -173,7 +220,7 @@ h1 {
 }
 
 .search-filter input {
-  padding: 8px;
+  padding: 10px;
   padding-left: 20px;
   width: 100%;
   box-sizing: border-box;
@@ -305,29 +352,35 @@ h1 {
 }
 
 .songs h1 {
-  font-size: 2rem;
+  font-size: 50px;
   margin-bottom: 10px;
+  color: var(--text-color);
 }
 
 .songs p {
   font-size: 1.2rem;
-  margin-bottom: 20px;
+  margin-bottom: 50px;
+  margin-top: -20px;
+  color: var(--light-text-color);
 }
 
 .album-cards {
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
+  gap: 30px;
   justify-content: center;
+  align-items: center;
+  margin-bottom: 50px;
 }
 
 .album-card {
   display: block;
-  width: 200px;
+  width: 300px;
   text-align: center;
   border-radius: 8px;
   overflow: hidden;
   position: relative;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.274);
 }
 
 .album-card img {
@@ -336,15 +389,196 @@ h1 {
   display: block;
 }
 
-.album-name {
+.album-info {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  padding-top: 20px;
+  padding-bottom: 10px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0));
   color: white;
-  padding: 10px;
   text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
+}
+
+.album-name {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.album-year {
+  margin: 0;
+  font-size: 13px;
+}
+
+.biography,
+.gallery,
+.events,
+.news,
+.social-media,
+.contact,
+footer {
+  background: white;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.biography h2,
+.gallery h2,
+.events h2,
+.news h2,
+.social-media h2,
+.contact h2,
+footer h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.biography p,
+.gallery p,
+.events p,
+.news p,
+.social-media p,
+.contact p {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.biography ul {
+  list-style: none;
+  padding: 0;
+}
+
+.biography ul li {
+  background: #eaeaea;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.gallery .gallery-grid {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.gallery .gallery-grid img {
+  width: calc(33.333% - 10px);
+  border-radius: 10px;
+  transition: transform 0.2s;
+}
+
+.gallery .gallery-grid img:hover {
+  transform: scale(1.05);
+}
+
+.gallery a {
+  display: inline-block;
+  margin-top: 10px;
+  text-decoration: none;
+  color: #333;
+  background: #eaeaea;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+
+.gallery a:hover {
+  background: #ccc;
+}
+
+.events ul,
+.news article,
+.contact form {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.events ul li,
+.news article {
+  background: #eaeaea;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.events ul li a,
+.news article a {
+  text-decoration: none;
+  color: #333;
+}
+
+.news article h3 {
+  margin: 0 0 5px;
+}
+
+.social-media .social-icons a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: #333;
+  background: #eaeaea;
+  padding: 10px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.social-media .social-icons a:hover {
+  background: #ccc;
+}
+
+.contact form label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+.contact form input,
+.contact form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.contact form button {
+  padding: 10px 15px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background: #555;
+}
+
+footer form {
+  display: flex;
+  gap: 10px;
+}
+
+footer form input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer form button {
+  padding: 10px 15px;
+  border: none;
+  background: #333;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+footer form button:hover {
+  background: #555;
 }
