@@ -1,0 +1,350 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+
+:root {
+  --blue: #46a6f5;
+  --blue-hover: #3192e2;
+  --text-color: #463b38;
+  --light-text-color: #645550;
+  --background-color: #eeeeee;
+  --white: #ffffff;
+  --green: #61d365;
+  --green-hover: #43ad47;
+}
+
+body {
+  background-color: var(--background-color);
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  background-color: var(--white);
+  padding: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+nav ul li a.active {
+  color: var(--blue);
+}
+
+nav ul li a:hover {
+  color: var(--blue);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  font-weight: 200;
+  font-family: "Lobster", cursive;
+  color: var(--blue);
+}
+
+.logo span {
+  color: var(--green);
+}
+
+.logo img {
+  height: 35px;
+  width: 35px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 50px;
+  color: var(--text-color);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-decoration: none;
+}
+
+th,
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+th {
+  background-color: #c8f5c9;
+  color: var(--text-color);
+}
+
+tr:hover {
+  background-color: #c8f5c9;
+}
+
+.home {
+  text-align: center;
+  height: 100vh;
+}
+
+.hero h1 {
+  font-size: 50px;
+  color: #333;
+}
+
+.hero p {
+  font-size: 18px;
+  margin-top: -40px;
+  color: #666;
+}
+
+.features {
+  padding: 20px;
+  width: auto;
+  border-radius: 8px;
+}
+
+.features h2 {
+  font-size: 2rem;
+  color: #333;
+}
+
+.features ul {
+  list-style: none;
+  padding: 0;
+}
+
+.features li {
+  font-size: 1.1rem;
+  color: #555;
+  margin: 0.5rem 0;
+}
+
+.container {
+  background-color: var(--white);
+  margin: 20px;
+  color: var(--text-color);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.students-filter {
+  margin-right: 20px;
+}
+
+.students-container {
+  margin-top: 35px;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.head {
+  background-color: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter {
+  width: 300px;
+  margin-left: 10px;
+}
+
+.search-filter input {
+  padding: 8px;
+  padding-left: 20px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 14px;
+  border-radius: 50px;
+  border: none;
+  color: var(--text-color);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-filter input:focus {
+  border: 2px solid #665751fa;
+  outline: none;
+}
+
+.search-filter input::placeholder {
+  color: #64555094;
+}
+
+.filter {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+}
+
+.citizens {
+  padding: 20px;
+}
+
+.filter-buttons {
+  margin-bottom: 20px;
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.filter-buttons button {
+  width: 80px;
+  height: 35px;
+  border: none;
+  background-color: var(--blue);
+  color: var(--white);
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s, color 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.filter-buttons button:hover {
+  background-color: #3192e2;
+}
+
+.citizens-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+  color: var(--text-color);
+}
+
+.citizenContainer {
+  border-radius: 10px;
+  padding: 15px;
+  background-color: var(--white);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.citizenContainer:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.123);
+  transform: translateY(-3px);
+}
+
+.citizenNumber {
+  font-size: 25px;
+  font-weight: bold;
+  margin-right: 15px;
+  color: var(--text-color);
+}
+
+.citizen-name {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: var(--text-color);
+}
+
+.citizen-age,
+.citizen-address,
+.citizen-status {
+  margin: 5px 0;
+  color: var(--light-text-color);
+}
+
+.toggle-button {
+  margin-top: 10px;
+  padding: 8px 12px;
+  border: none;
+  width: 100%;
+  background-color: var(--green);
+  color: white;
+  cursor: pointer;
+  border-radius: 50px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.toggle-button:hover {
+  background-color: var(--green-hover);
+}
+
+.citizen-status .active {
+  color: rgb(91, 212, 91);
+}
+
+.citizen-status .inactive {
+  color: rgb(252, 111, 111);
+}
+
+/* src/Components/Songs.css */
+.songs {
+  padding: 20px;
+  text-align: center;
+}
+
+.songs h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.songs p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.album-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.album-card {
+  display: block;
+  width: 200px;
+  text-align: center;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.album-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.album-name {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+}
