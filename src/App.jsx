@@ -72,8 +72,11 @@ function Home() {
         </div>
       </div>
 
-      {/* <div className="biography">
-        <h2>About the Artist</h2>
+      <div className="title">
+        <h1>About the Artist</h1>
+      </div>
+
+      <div className="biography">
         <p>
           Daniel Caesar, born Ashton Simmonds on April 5, 1995, is a critically
           acclaimed Canadian singer, songwriter, and record producer. Known for
@@ -86,7 +89,7 @@ function Home() {
           <li>Juno Award for R&B/Soul Recording of the Year (2018)</li>
           <li>Platinum-certified albums and singles</li>
         </ul>
-      </div> */}
+      </div>
 
       {/* <div className="gallery">
         <h2>Featured Works</h2>
