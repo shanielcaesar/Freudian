@@ -6,8 +6,8 @@
   --blue-hover: #3192e2;
   --text-color: #ffffff;
   --light-text-color: #ffffffb0;
-  --background-color: #191c22;
-  --white: #222630;
+  --background-color: #101216;
+  --white: #1c1f27;
   --green: #61d365;
   --green-hover: #43ad47;
 }
@@ -43,14 +43,14 @@ nav ul li {
 }
 
 nav ul li a {
-  color: var(--text-color);
+  color: var(--light-text-color);
   text-decoration: none;
   font-size: 18px;
   transition: color 0.3s;
 }
 
 nav ul li a.active {
-  color: var(--light-text-color);
+  color: var(--text-color);
 }
 
 nav ul li a:hover {
@@ -60,7 +60,7 @@ nav ul li a:hover {
 .logo {
   font-weight: 200;
   font-family: "Lobster", cursive;
-  color: var(--light-text-color);
+  color: var(--text-color);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -74,12 +74,13 @@ h1 {
 
 .bg {
   position: relative;
+  margin-bottom: 50px;
   height: 750px; /* Fixed height */
   background-image: url("/images/dcbg.jpg"); /* Path to your image */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; /* Ensure the image covers the area */
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.349);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.164);
 }
 
 .bg-content {
@@ -120,7 +121,14 @@ h1 {
 }
 
 .title h1 {
-  font-size: 50px;
+  font-size: 60px;
+  margin: 20px;
+}
+
+.title h2 {
+  font-size: 40px;
+  margin: 20px;
+  margin-top: 60px;
 }
 
 table {
@@ -428,22 +436,10 @@ h1 {
 .social-media,
 .contact,
 footer {
-  background: white;
   padding: 20px;
-  margin: 20px;
+  margin-left: 100px;
+  margin-right: 100px;
   border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.biography h2,
-.gallery h2,
-.events h2,
-.news h2,
-.social-media h2,
-.contact h2,
-footer h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
 }
 
 .biography p,
@@ -454,6 +450,7 @@ footer h2 {
 .contact p {
   font-size: 16px;
   line-height: 1.6;
+  color: var(--text-color);
 }
 
 .biography ul {
@@ -461,8 +458,13 @@ footer h2 {
   padding: 0;
 }
 
+.biography h2 {
+  color: var(--text-color);
+}
+
 .biography ul li {
-  background: #eaeaea;
+  background: var(--white);
+  color: var(--text-color);
   margin: 5px 0;
   padding: 10px;
   border-radius: 5px;
@@ -470,12 +472,13 @@ footer h2 {
 
 .gallery .gallery-grid {
   display: flex;
-  gap: 10px;
+  justify-content: center;
+  gap: 30px;
   flex-wrap: wrap;
 }
 
 .gallery .gallery-grid img {
-  width: calc(33.333% - 10px);
+  width: 350px;
   border-radius: 10px;
   transition: transform 0.2s;
 }
@@ -486,17 +489,17 @@ footer h2 {
 
 .gallery a {
   display: inline-block;
-  margin-top: 10px;
+  margin-top: 30px;
   text-decoration: none;
-  color: #333;
-  background: #eaeaea;
+  color: var(--light-text-color);
+  background: var(--white);
   padding: 10px 15px;
   border-radius: 5px;
   transition: background 0.2s;
 }
 
 .gallery a:hover {
-  background: #ccc;
+  color: var(--text-color);
 }
 
 .events ul,
