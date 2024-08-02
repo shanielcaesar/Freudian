@@ -8,6 +8,9 @@ import {
 import Citizens from "./Components/Citizens";
 import Students from "./Components/Students";
 import Albums from "./Components/Albums";
+import Freudian from "./Components/Freudian";
+import NeverEnough from "./Components/NeverEnough";
+
 import "./App.css";
 
 function App() {
@@ -26,7 +29,7 @@ function App() {
               Home
             </NavLink>
           </li>
-          <li>
+          {/* <li>
             <NavLink
               to="/citizens-record"
               className={({ isActive }) => (isActive ? "active" : "")}
@@ -41,7 +44,7 @@ function App() {
             >
               Students
             </NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink
               to="/album"
@@ -57,6 +60,8 @@ function App() {
         <Route path="/citizens-record" element={<Citizens />} />
         <Route path="/students-record" element={<Students />} />
         <Route path="/album" element={<Albums />} />
+        <Route path="/freudian" element={<Freudian />} />
+        <Route path="/never-enough" element={<NeverEnough />} />
       </Routes>
     </Router>
   );
@@ -72,33 +77,41 @@ function Home() {
         </div>
       </div>
 
-      {/* <div className="biography">
-        <h2>About the Artist</h2>
+      <div className="title">
+        <h1>About the Artist</h1>
+      </div>
+
+      <div className="biography">
         <p>
           Daniel Caesar, born Ashton Simmonds on April 5, 1995, is a critically
           acclaimed Canadian singer, songwriter, and record producer. Known for
           his soulful voice and emotive lyrics, Daniel has captivated audiences
           worldwide with his unique blend of R&B, soul, and gospel influences.
         </p>
-        <h3>Achievements</h3>
+        <div className="title">
+          <h2>Achievements</h2>
+        </div>
         <ul>
           <li>Grammy Award for Best R&B Performance (2019)</li>
           <li>Juno Award for R&B/Soul Recording of the Year (2018)</li>
           <li>Platinum-certified albums and singles</li>
         </ul>
-      </div> */}
+      </div>
 
-      {/* <div className="gallery">
-        <h2>Featured Works</h2>
+      <div className="title">
+        <h1>Featured Works</h1>
+      </div>
+
+      <div className="gallery">
         <div className="gallery-grid">
           <img src="/images/freudian.jpg" alt="Freudian" />
           <img src="/images/never-enough.png" alt="Never Enough" />
           <img src="/images/case-study.png" alt="Case Study 01" />
         </div>
         <a href="gallery.html">View More</a>
-      </div> */}
+      </div>
 
-      {/* <div className="events">
+      <div className="events">
         <h2>Upcoming Events</h2>
         <ul>
           <li>Concert at Madison Square Garden - July 25, 2024</li>
@@ -106,9 +119,9 @@ function Home() {
           <li>Album Release Party in Toronto - October 15, 2024</li>
         </ul>
         <a href="events.html">View All Events</a>
-      </div> */}
+      </div>
 
-      {/* <div className="news">
+      <div className="news">
         <h2>Latest News</h2>
         <article>
           <h3>New Album Release</h3>
@@ -121,7 +134,7 @@ function Home() {
           <a href="news2.html">Read More</a>
         </article>
         <a href="blog.html">Read All News</a>
-      </div> */}
+      </div>
 
       {/* <div className="social-media">
         <h2>Follow Me</h2>

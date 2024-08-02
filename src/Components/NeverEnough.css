@@ -1,0 +1,103 @@
+/* src/Components/Freudian.css */
+:root {
+  --blue: #46a6f5;
+  --blue-hover: #3192e2;
+  --text-color: #ffffff;
+  --light-text-color: #ffffffb0;
+  --background-color: #101216;
+  --white: #1c1f27;
+  --green: #61d365;
+  --green-hover: #43ad47;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.never-enough-cover {
+  height: 150px;
+  background: linear-gradient(to bottom, #1a30c8, #0c1658);
+
+  display: flex;
+  padding: 20px;
+  padding-top: 80px;
+  gap: 20px;
+}
+
+.album-details h1 {
+  font-size: 110px;
+  margin-top: -40px;
+  color: var(--text-color);
+}
+
+.album-details h4 {
+  font-size: 20px;
+  margin-top: -75px;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.never-enough-cover img {
+  height: 150px;
+  width: 150px;
+}
+
+.never-enough-wrapper {
+  height: 300px; /* Set the height limit for the gradient */
+  background: linear-gradient(to bottom, #0e122f, #101216);
+}
+
+.songs-list {
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+  color: var(--light-text-color);
+}
+
+.songs-list h4 {
+  font-size: 20px;
+}
+
+.songs-list p {
+  color: var(--text-color);
+}
+
+.song-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.song-number {
+  margin-right: 10px;
+  color: var(--light-text-color);
+}
+
+.song-image {
+  width: 50px;
+  height: 50px;
+  margin-right: 10px;
+}
+
+.song-details {
+  flex-grow: 1;
+}
+
+.song-title {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.song-artist {
+  font-size: 14px;
+  color: var(--light-text-color);
+}
+
+.song-duration {
+  margin-left: auto;
+  font-size: 14px;
+  color: var(--light-text-color);
+}

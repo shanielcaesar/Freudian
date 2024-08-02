@@ -1,5 +1,6 @@
 // src/Components/Songs.jsx
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Songs() {
   const albums = [
@@ -18,9 +19,9 @@ function Songs() {
       <p>Browse and manage your favorite album.</p>
       <div className="album-cards">
         {albums.map((album, index) => (
-          <a
+          <Link
             key={index}
-            href={`#${album.name.toLowerCase().replace(/\s+/g, "-")}`}
+            to={`/${album.name.toLowerCase().replace(/\s+/g, "-")}`}
             className="album-card"
           >
             <img src={album.imageUrl} alt={album.name} />
@@ -28,7 +29,7 @@ function Songs() {
               <div className="album-name">{album.name}</div>
               <div className="album-year">{album.year}</div>
             </div>
-          </a>
+          </Link>
         ))}
       </div>
     </div>
